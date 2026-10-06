@@ -576,16 +576,51 @@ h2 {
   align-items: center;
 }
 .about-visual {
-  background: #d7d0c2;
-  min-height: 420px;
-  padding: 30px;
+  background: var(--sand);
+  min-height: 520px;
+  margin: 0;
+  padding: 0;
   position: relative;
-  text-align: center;
+  overflow: hidden;
 }
-.about-visual > p {
-  font-size: 9px;
+.about-visual::after {
+  content: "";
+  position: absolute;
+  inset: 55% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(50, 15, 3, 0.72));
+  pointer-events: none;
+}
+.about-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  display: block;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.about-visual figcaption {
+  position: absolute;
+  z-index: 1;
+  left: 28px;
+  right: 28px;
+  bottom: 24px;
+  color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+}
+.about-visual figcaption span {
+  font-size: 8px;
   letter-spacing: 2px;
-  text-align: left;
+}
+.about-visual figcaption strong {
+  max-width: 190px;
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: right;
 }
 .monogram {
   font: 130px Georgia;
@@ -1199,16 +1234,16 @@ footer > div:last-child > span {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 34px;
-  border-top: 1px solid rgba(248, 243, 225, 0.25);
+  border-top: 1px solid rgba(245, 243, 237, 0.25);
 }
 .planning-keywords span {
   padding: 13px 0;
-  border-bottom: 1px solid rgba(248, 243, 225, 0.25);
+  border-bottom: 1px solid rgba(245, 243, 237, 0.25);
   font-size: 11px;
 }
 .planning-keywords span:nth-child(even) {
   padding-left: 20px;
-  border-left: 1px solid rgba(248, 243, 225, 0.25);
+  border-left: 1px solid rgba(245, 243, 237, 0.25);
 }
 .services {
   background: #eeeae3;
@@ -1228,7 +1263,7 @@ footer > div:last-child > span {
 }
 .featured .service-link,
 .mini-steps span {
-  border-color: rgba(248, 243, 225, 0.42);
+  border-color: rgba(245, 243, 237, 0.42);
 }
 .about {
   background: #e9e5de;
@@ -1286,5 +1321,14 @@ footer > div:last-child > span {
   }
   .planning-copy h2 {
     font-size: 29px;
+  }
+  .about-visual,
+  .about-visual img {
+    min-height: 400px;
+  }
+  .about-visual figcaption {
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
   }
 }
