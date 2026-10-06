@@ -1110,15 +1110,17 @@ footer > div:last-child > span {
   height: 520px;
   margin: 0;
   padding: 0;
-  background: var(--sand);
-  border-radius: 220px 220px 0 0;
-  box-shadow: 0 24px 70px rgba(50, 15, 3, 0.12);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 .hero-art::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 52%, rgba(50, 15, 3, 0.72));
+  background:
+    linear-gradient(90deg, var(--bg) 0%, rgba(248, 243, 225, 0.72) 12%, transparent 42%),
+    linear-gradient(180deg, transparent 58%, rgba(50, 15, 3, 0.68));
   pointer-events: none;
 }
 .hero-art img {
@@ -1265,7 +1267,7 @@ footer > div:last-child > span {
 @media (max-width: 720px) {
   .hero-art {
     height: 390px;
-    border-radius: 150px 150px 0 0;
+    border-radius: 0;
   }
   .hero-art figcaption {
     left: 22px;
