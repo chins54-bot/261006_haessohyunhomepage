@@ -15,3 +15,7 @@
 ## Netlify 연결
 
 GitHub 저장소의 `main` 브랜치를 연결하세요. 빌드 명령은 비워두고 Publish directory는 `dist`로 설정합니다. `netlify.toml`에도 게시 폴더를 지정했습니다. GitHub Pages 자동 배포는 사용하지 않습니다.
+
+## Vercel 연결
+
+GitHub 저장소를 그대로 연결하면 됩니다. 빌드 명령은 필요하지 않으며, `vercel.json`이 정적 사이트가 있는 `dist` 폴더를 배포 결과물로 지정합니다.
