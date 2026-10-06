@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#ai-chat-root button,
+#ai-chat-root input,
+#ai-chat-root textarea {
+  font: inherit;
+}
+
+#ai-chat-root .ai-typing-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background: #a07856;
+  animation: ai-typing 1.1s infinite ease-in-out;
+}
+
+#ai-chat-root .ai-typing-dot:nth-child(2) {
+  animation-delay: 0.14s;
+}
+
+#ai-chat-root .ai-typing-dot:nth-child(3) {
+  animation-delay: 0.28s;
+}
+
+@keyframes ai-typing {
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 767px) {
+  body:has(#haessohyun-ai-panel) {
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ai-chat-root .ai-typing-dot {
+    animation: none;
+  }
+}
